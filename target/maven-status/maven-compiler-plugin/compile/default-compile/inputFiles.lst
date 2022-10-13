@@ -1,3 +1,6 @@
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/service/ProductService.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/dataForUI/ProductDataUI.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/dao/ProductDao.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/dataForUI/ChannelDataUI.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/dto/UserDto.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/controller/AdviceController.java
@@ -5,12 +8,16 @@
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/controller/ChannelController.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/pojo/TableConstants.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/dto/dtoHelper/UserDtoHelper.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/pojo/ProductPojo.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/controller/ProductController.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/controller/UserController.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/spring/ControllerConfig.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/data/UserData.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/data/ProductData.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/pojo/ChannelPojo.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/dataForUI/UserDataUI.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/data/MessageData.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/form/ProductForm.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/spring/DBConfig.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/service/ChannelService.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/dto/ChannelDto.java
@@ -20,6 +27,7 @@
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/service/UserService.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/form/ChannelForm.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/pojo/AbstractPojo.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/util/ValidationUtil.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/exception/ApiException.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/spring/SpringConfig.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/spring/WebInitializer.java
@@ -28,5 +36,7 @@
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/dto/dtoHelper/ChannelDtoHelper.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/model/data/ErrorData.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/pojo/UserPojo.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/dto/ProductDto.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/util/UserType.java
 /home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/util/InvoiceType.java
+/home/xitiz/Documents/ToyAssure/src/main/java/com/increff/toyAssure/dto/dtoHelper/ProductDtoHelper.java

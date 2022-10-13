@@ -7,10 +7,10 @@ import lombok.Setter;
 @Setter
 public class ErrorData {
 
-    private Integer row;
+    private Long row;
     private String message;
 
-    public ErrorData(Integer row, String message)
+    public ErrorData(Long row, String message)
     {
         this.row=row;
         this.message=message;
@@ -19,6 +19,6 @@ public class ErrorData {
     @Override
     public String toString()
     {
-        return "Error row " + this.row + " " +this.message + "!";
+        return "Error row " + this.row + " " +this.message + " !";
     }
 }
