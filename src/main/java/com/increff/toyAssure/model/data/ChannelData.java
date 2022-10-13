@@ -8,6 +8,7 @@ import com.increff.toyAssure.util.InvoiceType;
 @Setter
 public class ChannelData
 {
+    private Long id;
     private String name;
     private InvoiceType invoiceType;
 

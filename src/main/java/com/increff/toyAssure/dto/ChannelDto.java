@@ -12,7 +12,7 @@ import com.increff.toyAssure.model.data.ChannelData;
 import java.util.List;
 
 import static java.util.Objects.isNull;
-import static com.increff.toyAssure.dto.dtoHelper.channelDtoHelper.*;
+import static com.increff.toyAssure.dto.dtoHelper.ChannelDtoHelper.*;
 @Service
 public class ChannelDto
 {
@@ -27,22 +27,13 @@ public class ChannelDto
 
     public ChannelDataUI add(ChannelForm channelForm)throws ApiException
     {
-        channelForm = normalize(channelForm);
         validate(channelForm);
-        ChannelPojo channelPojo = convertChannelFormtoChannelPojo(channelForm);
-        getCheckChannelExists(channelPojo);
-
-        channelService.add(channelPojo);
+        channelForm = normalize(channelForm);
+        channelService.add(convertChannelFormtoChannelPojo(channelForm));
         return convertChannelFormtoChannelDataUI(channelForm);
     }
 
-    public void getCheckChannelExists(ChannelPojo channelPojo)throws ApiException
-    {
-        if(isNull(channelService.selectByChannel(channelPojo.getName()))==false)
-        {
-            throw new ApiException("Channel Already exists, channel = " + channelPojo.getName());
-        }
-    }
+
 
 
 

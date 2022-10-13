@@ -9,6 +9,8 @@ import com.increff.toyAssure.pojo.ChannelPojo;
 
 import java.util.List;
 
+import static java.util.Objects.isNull;
+
 @Service
 @Transactional(rollbackFor = ApiException.class)
 public class ChannelService
@@ -17,20 +19,23 @@ public class ChannelService
     @Autowired
     private ChannelDao channelDao;
 
+    @Transactional(readOnly = true)
     public List<ChannelPojo> selectAll()
     {
         return channelDao.selectAll();
     }
 
-    public ChannelPojo selectByChannel(String name)
+    public void add(ChannelPojo channelPojo)throws ApiException
     {
-        return channelDao.selectByChannel(name);
-
-    }
-
-    public void add(ChannelPojo channelPojo)
-    {
+        getCheckChannelExists(channelPojo);
         channelDao.add(channelPojo);
+    }
+    public void getCheckChannelExists(ChannelPojo channelPojo)throws ApiException
+    {
+        if(isNull(channelDao.selectByChannel(channelPojo.getName()))==false)
+        {
+            throw new ApiException("Channel Already exists, channel = " + channelPojo.getName());
+        }
     }
 
 }

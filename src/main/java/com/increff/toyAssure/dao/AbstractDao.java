@@ -15,7 +15,7 @@ public abstract class AbstractDao<T> {
     public <T> T select(Class<T> pojo,Integer id)
     {
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<T> cr = (CriteriaQuery<T>)cb.createQuery(pojo);
+        CriteriaQuery<T> cr = cb.createQuery(pojo);
         Root<T> root = cr.from(pojo);
         cr.select(root).where(cb.equal(root.get("id"),id));
 
@@ -26,7 +26,7 @@ public abstract class AbstractDao<T> {
     public <T> List<T> selectAll(Class<T> pojo)
     {
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<T> cq = (CriteriaQuery<T>)cb.createQuery(pojo);
+        CriteriaQuery<T> cq = cb.createQuery(pojo);
         Root<T> root = cq.from(pojo);
         cq.select(root);
 
