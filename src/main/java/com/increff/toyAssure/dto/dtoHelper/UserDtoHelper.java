@@ -2,7 +2,6 @@ package com.increff.toyAssure.dto.dtoHelper;
 
 import com.increff.toyAssure.exception.ApiException;
 import com.increff.toyAssure.model.data.UserData;
-import com.increff.toyAssure.model.dataForUI.UserDataUI;
 import com.increff.toyAssure.model.form.UserForm;
 import com.increff.toyAssure.pojo.UserPojo;
 
@@ -32,13 +31,6 @@ public class UserDtoHelper
         return userDataList;
     }
 
-    public static UserDataUI convertUserFormtoUserDataUI(UserForm userForm)
-    {
-        UserDataUI userDataUI = new UserDataUI();
-        userDataUI.setName(userForm.getName());
-        userDataUI.setUserType(userForm.getUserType());
-        return userDataUI;
-    }
 
     public static UserPojo convertUserFormtoUserPojo(UserForm userForm)
     {
@@ -58,6 +50,12 @@ public class UserDtoHelper
         {
             throw new ApiException("UserType cannot be null");
         }
+
+       // TODO:Check for enum types specifically
+//        if(!(userForm.getUserType()=="CLIENT"||userForm.getUserType()=="CUSTOMER"))
+//        {
+//            throw new ApiException("UserType can only be CLIENT or CUSTOMER");
+//        }
     }
 
     public static UserForm normalize(UserForm userForm)

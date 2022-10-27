@@ -2,7 +2,6 @@ package com.increff.toyAssure.dto.dtoHelper;
 
 import com.increff.toyAssure.exception.ApiException;
 import com.increff.toyAssure.model.data.ChannelData;
-import com.increff.toyAssure.model.dataForUI.ChannelDataUI;
 import com.increff.toyAssure.model.form.ChannelForm;
 import com.increff.toyAssure.pojo.ChannelPojo;
 
@@ -13,13 +12,6 @@ import static java.util.Objects.isNull;
 
 public class ChannelDtoHelper
 {
-    public static ChannelDataUI convertChannelFormtoChannelDataUI(ChannelForm channelForm)
-    {
-        ChannelDataUI channelDataUI = new ChannelDataUI();
-        channelDataUI.setName(channelForm.getName());
-        channelDataUI.setInvoiceType(channelForm.getInvoiceType());
-        return channelDataUI;
-    }
 
     public static ChannelData convertChannelPojotoChanneData(ChannelPojo channelPojo)
     {

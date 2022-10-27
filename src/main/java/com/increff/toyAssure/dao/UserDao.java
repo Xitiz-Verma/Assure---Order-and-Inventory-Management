@@ -3,12 +3,14 @@ package com.increff.toyAssure.dao;
 import com.increff.toyAssure.pojo.UserPojo;
 import com.increff.toyAssure.util.UserType;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
+@Transactional
 @Repository
 public class UserDao extends AbstractDao
 {

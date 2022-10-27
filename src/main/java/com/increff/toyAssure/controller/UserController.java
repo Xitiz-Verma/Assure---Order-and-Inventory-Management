@@ -3,7 +3,6 @@ package com.increff.toyAssure.controller;
 import com.increff.toyAssure.dto.UserDto;
 import com.increff.toyAssure.exception.ApiException;
 import com.increff.toyAssure.model.data.UserData;
-import com.increff.toyAssure.model.dataForUI.UserDataUI;
 import com.increff.toyAssure.model.form.UserForm;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -36,8 +35,9 @@ public class UserController
 
     @ApiOperation(value = "Add an User(Client/Customer)")
     @RequestMapping(path = "/users", method =RequestMethod.POST)
-    public UserDataUI add(@RequestBody UserForm userForm)throws ApiException
+    public void add(@RequestBody UserForm userForm)throws ApiException
     {
-        return userDto.add(userForm);
+        //TODO:add controller level checking check enum annotations
+        userDto.add(userForm);
     }
 }

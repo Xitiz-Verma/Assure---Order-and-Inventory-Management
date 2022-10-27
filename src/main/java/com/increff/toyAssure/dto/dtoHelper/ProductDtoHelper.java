@@ -3,7 +3,6 @@ package com.increff.toyAssure.dto.dtoHelper;
 import com.increff.toyAssure.exception.ApiException;
 import com.increff.toyAssure.model.data.ErrorData;
 import com.increff.toyAssure.model.data.ProductData;
-import com.increff.toyAssure.model.dataForUI.ProductDataUI;
 import com.increff.toyAssure.model.form.ProductForm;
 import com.increff.toyAssure.pojo.ProductPojo;
 
@@ -39,26 +38,7 @@ public class ProductDtoHelper
         return productData;
     }
 
-    public static List<ProductDataUI> convertProductFormListtoProductDataUIList(List<ProductForm> productFormList)
-    {
-        List<ProductDataUI> productDataUIList = new ArrayList<>();
-        for(ProductForm productForm : productFormList)
-        {
-            productDataUIList.add(convertProductFormtoProductDataUI(productForm));
-        }
-        return productDataUIList;
-    }
 
-    public static ProductDataUI convertProductFormtoProductDataUI(ProductForm productForm)
-    {
-        ProductDataUI productDataUI = new ProductDataUI();
-        productDataUI.setClientSkuId(productForm.getClientSkuId());
-        productDataUI.setName(productForm.getName());
-        productDataUI.setBrandId(productForm.getBrandId());
-        productDataUI.setMrp(productForm.getMrp());
-        productDataUI.setDescription(productForm.getDescription());
-        return productDataUI;
-    }
 
     public static List<ProductPojo> convertProductFormListtoProductPojoList(List<ProductForm> productFormList,Long clientId)
     {

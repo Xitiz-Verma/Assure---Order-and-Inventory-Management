@@ -40,6 +40,12 @@ public abstract class AbstractDao<T> {
         em.persist(pojoObject);
     }
 
+    public <T> T addAndReturn (T pojoObject)
+    {
+        em.persist(pojoObject);
+        return pojoObject;
+    }
+
     public void update()
     {
         //SYMBOLIC

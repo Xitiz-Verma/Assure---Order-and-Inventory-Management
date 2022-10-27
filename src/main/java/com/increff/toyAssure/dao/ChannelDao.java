@@ -9,7 +9,9 @@ import java.util.List;
 @Repository
 public class ChannelDao extends AbstractDao {
 
-   // private final static String SELECT_BY_INVOICE = "select p from ChannelPojo p where invoiceType=:invoiceType";
+   private final static String SELECT_BY_INVOICE = "select p from ChannelPojo p where invoiceType=:invoiceType";
+
+    private final static String SELECT_BY_ID = "select p from ChannelPojo p where id =:id";
 
     private final static String SELECT_BY_CHANNEL = "select p from ChannelPojo p where name=:name";
 
@@ -20,6 +22,13 @@ public class ChannelDao extends AbstractDao {
     public ChannelPojo selectByChannel(String name) {
         TypedQuery<ChannelPojo> query = em().createQuery(SELECT_BY_CHANNEL, ChannelPojo.class);
         query.setParameter("name", name);
+        return (ChannelPojo) getSingle(query);
+
+    }
+
+    public ChannelPojo selectById(Long id) {
+        TypedQuery<ChannelPojo> query = em().createQuery(SELECT_BY_ID, ChannelPojo.class);
+        query.setParameter("id", id);
         return (ChannelPojo) getSingle(query);
 
     }

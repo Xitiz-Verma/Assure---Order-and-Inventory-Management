@@ -14,6 +14,8 @@ public class ProductDao extends AbstractDao
 
     private final static String SELECT_BY_CLIENT_ID = "select p from ProductPojo p where clientId=:clientId";
 
+    private final static String SELECT_BY_CLIENT_SKU_ID_CLIENT_ID = "select p for ProductPojo p where clientSkuId=:clientSkuId and clientId=:clientId";
+
     public List<ProductPojo> selectAll()
     {
         return selectAll(ProductPojo.class);
@@ -33,6 +35,13 @@ public class ProductDao extends AbstractDao
         return getMultiple(query);
     }
 
+    public ProductPojo selectByClientSkuIdandClientId(String clientSkuId, Long clientId)
+    {
+        TypedQuery<ProductPojo> query=em().createQuery(SELECT_BY_CLIENT_SKU_ID_CLIENT_ID,ProductPojo.class);
+        query.setParameter("clientSkuId",clientSkuId);
+        query.setParameter("clientId",clientId);
+        return (ProductPojo) getSingle(query);
+    }
     public void add(ProductPojo productPojo)
     {
         addAbs(productPojo);

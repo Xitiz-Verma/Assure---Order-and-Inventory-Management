@@ -1,6 +1,5 @@
 package com.increff.toyAssure.controller;
 
-import com.increff.toyAssure.model.dataForUI.ChannelDataUI;
 import com.increff.toyAssure.model.form.ChannelForm;
 import com.increff.toyAssure.dto.ChannelDto;
 import io.swagger.annotations.Api;
@@ -29,8 +28,8 @@ public class ChannelController
 
     @ApiOperation(value="Add Channel")
     @RequestMapping(path="/channels", method = RequestMethod.POST)
-    public ChannelDataUI addChannel(@RequestBody ChannelForm channelForm)throws ApiException
+    public void addChannel(@RequestBody ChannelForm channelForm)throws ApiException
     {
-        return channelDto.add(channelForm);
+        channelDto.add(channelForm);
     }
 }

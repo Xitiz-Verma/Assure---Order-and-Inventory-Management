@@ -3,7 +3,6 @@ package com.increff.toyAssure.controller;
 import com.increff.toyAssure.dto.ProductDto;
 import com.increff.toyAssure.exception.ApiException;
 import com.increff.toyAssure.model.data.ProductData;
-import com.increff.toyAssure.model.dataForUI.ProductDataUI;
 import com.increff.toyAssure.model.form.ProductForm;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -35,15 +34,15 @@ public class ProductController
 
     @ApiOperation(value = "Add Bulk Product Details")
     @RequestMapping(path = "/products", method = RequestMethod.POST)
-    public List<ProductDataUI> bulkAdd(@RequestBody List<ProductForm> productFormList, @RequestParam Long clientId)throws ApiException
+    public void bulkAdd(@RequestBody List<ProductForm> productFormList, @RequestParam Long clientId)throws ApiException
     {
-        return productDto.bulkAdd(productFormList,clientId);
+        productDto.bulkAdd(productFormList,clientId);
     }
 
     @ApiOperation(value = "Update Product Details")
     @RequestMapping(path = "/products/{globalSkuId}", method = RequestMethod.PUT)
-    public ProductDataUI update(@RequestBody ProductForm productForm, @PathVariable Long globalSkuId)throws ApiException
+    public void update(@RequestBody ProductForm productForm, @PathVariable Long globalSkuId)throws ApiException
     {
-        return productDto.update(productForm,globalSkuId);
+        productDto.update(productForm,globalSkuId);
     }
 }
