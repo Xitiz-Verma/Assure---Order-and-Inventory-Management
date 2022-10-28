@@ -11,11 +11,14 @@ com/increff/toyAssure/dao/OrderDao.class
 com/increff/toyAssure/model/data/ProductData.class
 com/increff/toyAssure/dto/BinSkuDto.class
 com/increff/toyAssure/util/ValidationUtil.class
+com/increff/toyAssure/controller/ChannelListingController.class
 com/increff/toyAssure/model/form/ChannelListingForm.class
 com/increff/toyAssure/model/data/UserData.class
 com/increff/toyAssure/model/form/OrderForm.class
 com/increff/toyAssure/dao/UserDao.class
+com/increff/toyAssure/dto/ChannelListingDto.class
 com/increff/toyAssure/dto/ProductDto.class
+com/increff/toyAssure/util/InvoiceUtil.class
 com/increff/toyAssure/model/form/ChannelForm.class
 com/increff/toyAssure/controller/BinSkuController.class
 com/increff/toyAssure/controller/UIController.class
@@ -29,6 +32,7 @@ com/increff/toyAssure/dto/ChannelDto.class
 com/increff/toyAssure/util/OrderStatus.class
 com/increff/toyAssure/spring/ControllerConfig.class
 com/increff/toyAssure/pojo/ProductPojo.class
+com/increff/toyAssure/dto/OrderDto$1.class
 com/increff/toyAssure/pojo/InventoryPojo.class
 com/increff/toyAssure/util/InvoiceType.class
 com/increff/toyAssure/model/form/ChannelListingUploadForm.class
@@ -40,6 +44,7 @@ com/increff/toyAssure/pojo/ChannelPojo.class
 com/increff/toyAssure/model/data/OrderItemData.class
 com/increff/toyAssure/spring/DBConfig.class
 com/increff/toyAssure/exception/ApiException.class
+com/increff/toyAssure/model/data/InvoiceData.class
 com/increff/toyAssure/pojo/UserPojo.class
 com/increff/toyAssure/dto/OrderDto.class
 com/increff/toyAssure/controller/BinController.class
@@ -59,6 +64,7 @@ com/increff/toyAssure/model/data/BinData.class
 com/increff/toyAssure/api/UserApi.class
 com/increff/toyAssure/api/ChannelListingApi.class
 com/increff/toyAssure/api/ChannelApi.class
+com/increff/toyAssure/api/OrderApi.class
 com/increff/toyAssure/dto/BinDto.class
 com/increff/toyAssure/dao/ProductDao.class
 com/increff/toyAssure/dao/ChannelDao.class
@@ -69,7 +75,6 @@ com/increff/toyAssure/dao/AbstractDao.class
 com/increff/toyAssure/pojo/OrderPojo.class
 com/increff/toyAssure/pojo/BinPojo.class
 com/increff/toyAssure/util/UserType.class
-com/increff/toyAssure/api/OrderService.class
 com/increff/toyAssure/dto/dtoHelper/UserDtoHelper.class
 com/increff/toyAssure/api/BinApi.class
 com/increff/toyAssure/pojo/AbstractPojo.class

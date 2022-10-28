@@ -37,7 +37,6 @@ public class UserController
     @RequestMapping(path = "/users", method =RequestMethod.POST)
     public void add(@RequestBody UserForm userForm)throws ApiException
     {
-        //TODO:add controller level checking check enum annotations
         userDto.add(userForm);
     }
 }

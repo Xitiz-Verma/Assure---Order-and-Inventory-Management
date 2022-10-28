@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.*;
 
 import static com.increff.toyAssure.util.ValidationUtil.throwErrorIfNotEmpty;
+import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 
 @Service
@@ -73,5 +74,22 @@ public class BinSkuApi
             row++;
         }
         throwErrorIfNotEmpty(errorDataList);
+    }
+
+    public void allocateQty(Long allocatedQty, Long globalSkuId)
+    {
+        List<BinSkuPojo> binSkuPojoList = binSkuDao.selectByGlobalSkuId(globalSkuId);
+        Collections.sort(binSkuPojoList,Comparator.comparing(BinSkuPojo::getQuantity));
+        Collections.reverse(binSkuPojoList);
+
+        for(BinSkuPojo binSkuPojo : binSkuPojoList)
+        {
+            Long allocatedQtyInBin = min(allocatedQty,binSkuPojo.getQuantity());
+            binSkuPojo.setQuantity(binSkuPojo.getQuantity()-allocatedQtyInBin);
+            allocatedQty=allocatedQty-allocatedQtyInBin;
+
+            if(allocatedQty == 0)
+                break;
+        }
     }
 }

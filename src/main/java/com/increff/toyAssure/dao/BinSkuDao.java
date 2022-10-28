@@ -42,10 +42,10 @@ public class BinSkuDao extends AbstractDao
         return (BinSkuPojo) getSingle(query);
 
     }
-    public BinSkuPojo selectByGlobalSkuId(Long globalSkuId)
+    public List<BinSkuPojo> selectByGlobalSkuId(Long globalSkuId)
     {
         TypedQuery<BinSkuPojo> query = em().createQuery(SELECT_BY_GLOBAL_SKU_ID,BinSkuPojo.class);
         query.setParameter("globalSkuId",globalSkuId);
-        return (BinSkuPojo) getSingle(query);
+        return getMultiple(query);
     }
 }
