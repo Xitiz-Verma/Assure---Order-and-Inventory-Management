@@ -4,6 +4,7 @@ import com.increff.toyAssure.exception.ApiException;
 import com.increff.toyAssure.model.data.UserData;
 import com.increff.toyAssure.model.form.UserForm;
 import com.increff.toyAssure.pojo.UserPojo;
+import com.increff.toyAssure.util.UserType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,12 +51,10 @@ public class UserDtoHelper
         {
             throw new ApiException("UserType cannot be null");
         }
-
-       // TODO:Check for enum types specifically
-//        if(!(userForm.getUserType()=="CLIENT"||userForm.getUserType()=="CUSTOMER"))
-//        {
-//            throw new ApiException("UserType can only be CLIENT or CUSTOMER");
-//        }
+        if(!(userForm.getUserType()== UserType.CLIENT||userForm.getUserType()==UserType.CUSTOMER))
+        {
+            throw new ApiException("UserType can only be CLIENT or CUSTOMER");
+        }
     }
 
     public static UserForm normalize(UserForm userForm)
