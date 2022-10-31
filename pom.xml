@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.increff</groupId>
-    <artifactId>ToyAssure</artifactId>
+    <artifactId>Assure</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>ToyAssure Maven Webapp</name>
+    <name>Assure Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
   <properties>
@@ -29,7 +29,7 @@
     <!-- Jetty configuration -->
     <jetty.version>9.4.21.v20190926</jetty.version>
     <jetty.http.port>9002</jetty.http.port>
-    <jetty.context>/ToyAssure</jetty.context>
+    <jetty.context>/Assure</jetty.context>
     <failOnMissingWebXml>false</failOnMissingWebXml>
 
 
